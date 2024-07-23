@@ -5,9 +5,9 @@ program = bool(True)
 
 def limpar_terminal():
     sistema = os.name
-    if sistema == 'nt':  # Windows
+    if sistema == 'nt':  
         os.system('cls')
-    else:  # Unix/Linux/MacOS
+    else:  
         os.system('clear')
 
 def divisor():
