@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Roupas Online</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Roupas da Thayro Gabriel</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="#cadastro">Cadastro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>Bem-vindo à nossa loja, professor Ivanildo!</h2>
+            <p>Temos uma seleção de roupas incríveis que vão conquistar todos os estilos!</p>
+        </section>
+
+        <section id="produtos">
+            <h2>Galeria de Produtos</h2>
+            <div class="galeria">
+                <div class="produto">
+                    <img src="./imagens/camisa1.jpg" alt="Camisa Polo">
+                    <h3>Camisa Polo</h3>
+                    <p>Camisa polo masculina, 100% algodão.</p>
+                    <p>Preço: R$ 120,00</p>
+                    <p>Disponibilidade: Em estoque</p>
+                </div>
+                <div class="produto">
+                    <img src="./imagens/vestido1.jpg" alt="Vestido Floral">
+                    <h3>Vestido Floral</h3>
+                    <p>Vestido feminino com estampa floral.</p>
+                    <p>Preço: R$ 150,00</p>
+                    <p>Disponibilidade: Em estoque</p>
+                </div>
+                <div class="produto">
+                    <img src="./imagens/calca1.jpg" alt="Calça Jeans">
+                    <h3>Calça Jeans</h3>
+                    <p>Calça jeans skinny, lavagem clara.</p>
+                    <p>Preço: R$ 180,00</p>
+                    <p>Disponibilidade: Em estoque</p>
+                </div>
+                <div class="produto">
+                    <img src="./imagens/jaqueta1.jpg" alt="Jaqueta de Couro">
+                    <h3>Jaqueta de Couro</h3>
+                    <p>Jaqueta de couro masculina, com fecho frontal.</p>
+                    <p>Preço: R$ 250,00</p>
+                    <p>Disponibilidade: Em estoque</p>
+                </div>
+                <div class="produto">
+                    <img src="./imagens/saia1.jpg" alt="Saia Midi">
+                    <h3>Saia Midi</h3>
+                    <p>Saia midi feminina, com cintura alta.</p>
+                    <p>Preço: R$ 130,00</p>
+                    <p>Disponibilidade: Em estoque</p>
+                </div>
+                <div class="produto">
+                    <img src="./imagens/blusa1.jpg" alt="Blusa de Manga Longa">
+                    <h3>Blusa de Manga Longa</h3>
+                    <p>Blusa de manga longa, ideal para dias mais frios.</p>
+                    <p>Preço: R$ 90,00</p>
+                    <p>Disponibilidade: Em estoque</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato">
+            <h2>Entre em Contato</h2>
+            <p>Você pode nos contatar pelo e-mail contato@ceep.com ou pelo telefone (75) 99999-9999.</p>
+        </section>
+
+        <section id="cadastro">
+            <h2>Cadastro</h2>
+            <form action="processa_cadastro.php" method="post">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required placeholder="Seu nome">
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required placeholder="Seu e-mail">
+
+                <label for="endereco">Endereço:</label>
+                <textarea id="endereco" name="endereco" rows="4" required placeholder="Seu endereço"></textarea>
+
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" required placeholder="Seu telefone">
+
+                <label for="contato">Preferências de Contato:</label>
+                <select id="contato" name="contato">
+                    <option value="email">E-mail</option>
+                    <option value="telefone">Telefone</option>
+                </select>
+
+                <button type="submit">Cadastrar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Thayro Gabriel. Todos os direitos reservados.</p>
+        <ul>
+            <li><a href="#home">Início</a></li>
+            <li><a href="#produtos">Produtos</a></li>
+            <li><a href="#contato">Contato</a></li>
+            <li><a href="#cadastro">Cadastro</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
