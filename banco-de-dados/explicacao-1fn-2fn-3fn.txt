@@ -1,0 +1,49 @@
+1FN
+
+Objetivo: garante que todos os grupos são atômicos e não se repetem
+
+Verificação: cada campo contém um único valor.
+
+Exemplo:
+Tabela Produtos
+ID_Produto, Nome, Preço, ID_Categoria, ID_Fornecedor
+
+Ações:
+dividr qualquer tabela que contenha listas ou conjuntos em tabelas separadas.
+
+
+2FN
+
+Objetivo: excluir dependências parciais. cada atributo que não é chave vai depender de toda a chave primária.
+
+Exemplo:
+separar as informações do cliente dos pedidos.
+
+Ações:
+Tabela Pedidos
+ID_Pedido (PK), Data, ID_Cliente (FK)
+Tabela Itens_Pedido
+ID_Item_Pedido (PK), ID_Pedido (FK), ID_Produto (FK), Quantidade
+
+Explicação:
+elimina redundâncias e inconsistências que ocorrem quando dados são dependentes da parte de chave primária.
+
+
+3FN
+
+Objetivo: excluir dependências parciais. cada atributo que não é chave vai depender de toda a chave primária.
+
+Verificação:
+se não há atributos dependendo de outros atributos que não sao chave.
+
+Ações:
+certificar que não há dependências transitivas
+
+Exemplo:
+Tabela Produtos:
+Todos os atributos (Nome, Preço) dependem diretamente do ID_Produto.
+
+Justificativa:
+isso garante que cada tabela contém apenas informações diretamente relacionadas à sua chave primária, evitando redundâncias e mantendo a consistência.
+
+

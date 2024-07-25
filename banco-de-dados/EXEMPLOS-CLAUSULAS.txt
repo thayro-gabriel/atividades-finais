@@ -1,0 +1,84 @@
+WHERE ----------
+
+Exemplo 1: Selecionar clientes com um telefone específico
+
+SELECT Nome, Telefone
+FROM Clientes
+WHERE Telefone = '123456789';
+
+Exemplo 2: Selecionar produtos com preço abaixo de 50
+
+SELECT Nome, Preço
+FROM Produtos
+WHERE Preço < 50.00;
+
+Exemplo 3: Selecionar pedidos feitos após uma data específica
+
+SELECT ID_Pedido, Data
+FROM Pedidos
+WHERE Data > '2024-07-01';
+
+ORDER BY ---------------
+
+Exemplo 1: Ordenar clientes por nome em ordem alfabética
+
+SELECT Nome, Email
+FROM Clientes
+ORDER BY Nome ASC;
+
+Exemplo 2: Ordenar produtos por preço em ordem decrescente
+
+SELECT Nome, Preço
+FROM Produtos
+ORDER BY Preço DESC;
+
+Exemplo 3: Ordenar pedidos por data e ID do pedido
+
+SELECT ID_Pedido, Data
+FROM Pedidos
+ORDER BY Data DESC, ID_Pedido ASC;
+
+GROUP BY ------------------
+
+Exemplo 1: Contar o número de pedidos por cliente
+
+SELECT ID_Cliente, COUNT(*) AS Total_Pedidos
+FROM Pedidos
+GROUP BY ID_Cliente;
+
+Exemplo 2: Obter a média de preço dos produtos por categoria
+
+SELECT ID_Categoria, AVG(Preço) AS Preço_Médio
+FROM Produtos
+GROUP BY ID_Categoria;
+
+Exemplo 3: Contar o número de produtos em cada categoria
+
+SELECT Categorias.Nome AS Categoria, COUNT(Produtos.ID_Produto) AS Total_Produtos
+FROM Categorias
+LEFT JOIN Produtos ON Categorias.ID_Categoria = Produtos.ID_Categoria
+GROUP BY Categorias.Nome;
+
+JOIN -----------------
+
+Exemplo 1: Combinar pedidos com clientes
+
+SELECT Clientes.Nome, Pedidos.Data
+FROM Pedidos
+JOIN Clientes ON Pedidos.ID_Cliente = Clientes.ID_Cliente;
+
+Exemplo 2: Combinar itens de pedidos com produtos
+
+SELECT Itens_Pedido.ID_Pedido, Produtos.Nome, Itens_Pedido.Quantidade
+FROM Itens_Pedido
+JOIN Produtos ON Itens_Pedido.ID_Produto = Produtos.ID_Produto;
+
+Exemplo 3: Combinar pedidos com clientes e produtos
+
+SELECT Clientes.Nome AS Cliente, Produtos.Nome AS Produto, Itens_Pedido.Quantidade
+FROM Pedidos
+JOIN Itens_Pedido ON Pedidos.ID_Pedido = Itens_Pedido.ID_Pedido
+JOIN Produtos ON Itens_Pedido.ID_Produto = Produtos.ID_Produto
+JOIN Clientes ON Pedidos.ID_Cliente = Clientes.ID_Cliente;
+
+
